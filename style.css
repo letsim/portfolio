@@ -1,0 +1,83 @@
+/*
+* {
+
+	color: red;
+	font-family: jaf-facitweb, Changa One, sans-serif;
+}
+*/
+
+.container {
+	width: 80%;
+	margin: auto;
+}
+
+p {
+	font-family: jaf-facitweb, sans-serif;
+	font-size: 16px;
+	font-weight: 300;
+	font-style: normal;
+	text-align: left;
+	line-height: 130%;
+	color: black;
+}
+
+h1 {
+	font-family: Changa One, jaf-facitweb, cursive;
+	font-size: 60px;
+	font-weight: 400;
+	text-align: left;
+}
+
+#navbar {
+	display: block;
+	position: fixed;
+	background-color: white;
+	box-shadow: 0px 1px 0px #DDDDDD;
+}
+
+#nav-name {
+	display: inline-block;
+	font-family: jaf-facitweb, sans-serif;
+	font-weight: 600;
+	font-style: normal;
+	font-size: 18px;
+	color: black;
+}
+
+#type-divider {
+	display: inline-block;
+	font-family: jaf-facitweb, sans-serif;
+	font-weight: 600;
+	font-style: normal;
+	color: #E05550;
+}
+
+#nav-subtitle {
+	font-size: 14px;
+}
+
+
+
+
+h4 {
+	font-family: jaf-facitweb, sans-serif;
+	font-size: 16px;
+	font-weight: 300;
+	font-style: normal;
+	text-align: left;
+	color: black;
+	line-height: 130%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
