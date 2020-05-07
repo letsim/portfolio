@@ -1,0 +1,66 @@
+.site-hero-title {
+	margin-bottom: 40px;
+}
+
+.presentation {
+	margin-bottom: 40px;
+}
+
+.resume {
+	width: 50%;
+}
+
+.resume-title {
+	border-bottom: 3px solid #000;
+	padding-bottom: .5px;
+	display: inline-block;
+}
+
+.resume-text {
+	margin-top: 8px;
+	line-height: 1.6;
+	margin-bottom: 20
+}
+
+.landing-pages-heatmap {
+	margin-top: 40px;
+	max-width: 100%;
+}
+
+.dual-maroto {
+	margin: 25px 0;
+}
+
+
+.container .dual-maroto {
+	display: flex;
+	justify-content: space-between;
+}
+
+
+.coluna-esquerda, .coluna-direita {
+	max-width: 48.2%;
+}
+
+.cobli-esquerda-img {
+	max-width: 130%;
+	position: ;
+}
+
+.cobli-direita-img {
+	max-width: 100%;
+	box-sizing: border-box;
+	border: 0.8px solid #93969D;
+}
+
+.landing-pages-heatmap {
+	margin-bottom: 60px;
+}
+
+.new-landing-pages {
+	margin-bottom: 40px;
+}
+
+
+
+

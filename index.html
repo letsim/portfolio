@@ -12,92 +12,98 @@
 </head>
 <body>
 
-	<nav id=navbar> 
-		<div class="container">
-		<a class="logo" href="/"> <img src=""> <!--incluir imagem aqui-->
-			<p id="nav-name"> Letícia Simões </p>
-			<span id="type-divider"> | </span>
-			<p id="nav-subtitle"> UX/UI Designer </p>
-		</a>
-		<a href="/portfolio/img/cv-leticia-simoes"> <!--esse arquivo não existe ainda-->
-			<p>CV</p>
-			<img class="download-icon" src="">
-		</a>
+	<header class="header"> 
+		<div class="container navbar">
+			<a class="identity" href="./index.html"> 
+				<img class="logo" src="./img/identity-red.svg" width="32px"> 
+				<span id="nav-name">Letícia Simões</span>
+				<span id="nav-subtitle">UX/UI Designer</span>
+			</a>
+			<a class="cv" href="./files/leticia-simoes-CV.pdf">
+				<span>CV</span>
+				<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path class="download-icon" d="M12 6L10.9425 4.9425L6.75 9.1275V0H5.25V9.1275L1.065 4.935L0 6L6 12L12 6Z" fill="#010101"/>
+				</svg> 
+			</a>
 		</div>
-	</nav> 
+	</header> 
 
 
-	<header>
+	<section class="presentation">
 	<div class="container">
 	    <h1>Letícia Simões</h1>
-	    <div class="header-divider"></div> <!--estilizar divider-->
-	    <h4>Product Designer / UX/UI Designer @ São Paulo, Brazil</h4>
-	    <h4>With over 3 years of experience in UI/UX, responsive web and graphic design, my focus is to build experiences based on user research and data analysis.</h4>
+	    <div class="header-divider"></div> 
+	    <h5>Product Designer / UX/UI Designer @ São Paulo, Brazil</h5>
+	    <h5>With over 3 years of experience in UI/UX, responsive web and graphic design, my focus is to build experiences based on user research and data analysis.</h5>
 	</div>
-	</header>
+	</section>
 
 
 	<main>
-		<div class="container">
-			<a href="/daily-feed">
-				<div class="big-frame"><img src=""> <!--incluir imagem aqui-->
-					<p class="project-title">Daily Feed</p>
-					<p class="project-subtitle">UX case</p>
+		<section class="container work-grid">
+			<section class="grid-row">
+				<a href="/daily-feed">
+					<div class="frame big-frame"><img class="thumbnail" src="./img/daily-feed-thumb.png"> <!--incluir imagem aqui-->
+						<h4 class="project-title">Daily Feed</h4>
+						<h5 class="project-subtitle">UX case</h5>
+					</div>
+				</a>
+
+				<div class="grid-divider">
 				</div>
-			</a>
 
-			<div class="grid-divider">
-			</div>
+				<a href="/alert-management">
+					<div class="frame small-frame"><img class="thumbnail" src="./img/alert-management-thumb.png">
+						<h4 class="project-title">Alert Management</h4>
+						<h5 class="project-subtitle">UX case</h5>
+					</div>
+				</a>
+			</section class="grid-row">
 
-			<a href="/alert-management">
-				<div class="small-frame"><img src=""> <!--incluir imagem aqui-->
-					<p class="project-title">Alert Management</p>
-					<p class="project-subtitle">UX case</p>
-				</div>
-			</a>
+			<section class="grid-row">
+				<a href="./landing-pages.html">
+					<div class="frame small-frame"><img class="thumbnail" src="./img/landing-pages-thumb.png"> <!--incluir imagem aqui-->
+						<h4 class="project-title">Landing pages</h4>
+						<h5 class="project-subtitle">UX/UI design</h5>
+					</div>
+				</a>
 
-			<a href="/landing-pages">
-				<div class="small-frame"><img src=""> <!--incluir imagem aqui-->
-					<p class="project-title">Landing pages</p>
-					<p class="project-subtitle">UX/UI design</p>
-				</div>
-			</a>
+				<a href="./site-hero.html">
+					<div class="frame big-frame"><img class="thumbnail" src="./img/site-hero-thumb.png">
+						<h4 class="project-title">Site hero</h4>
+						<h5 class="project-subtitle">Illustration</h5>
+					</div>
+				</a>
+			</section class="grid-row">
 
-			<a href="/coblis-site-hero">
-				<div class="big-frame"><img src=""> <!--incluir imagem aqui-->
-					<p class="project-title">Cobli's site hero</p>
-					<p class="project-subtitle">Illustration</p>
-				</div>
-			</a>
+			<section class="grid-row">
+				<a href="./retargeting-material.html">
+					<div class="frame big-frame"><img class="thumbnail" src="./img/retargeting-material-thumb.png">
+						<h4 class="project-title">Retargeting material</h4>
+						<h5 class="project-subtitle">UI design</h5>
+					</div>
+				</a>
 
-			<a href="/retargeting-material">
-				<div class="big-frame"><img src=""> <!--incluir imagem aqui-->
-					<p class="project-title">Retargeting material</p>
-					<p class="project-subtitle">UI design</p>
-				</div>
-			</a>
-
-			<a href="/aluras-icons">
-				<div class="small-frame"><img src=""> <!--incluir imagem aqui-->
-					<p class="project-title">Alura's icons</p>
-					<p class="project-subtitle">Illustration</p>
-				</div>
-			</a>
-
-		</div>
+				<a href="./aluras-icons.html">
+					<div class="frame small-frame"><img class="thumbnail" src="./img/aluras-icons-thumb.png">
+						<h4 class="project-title">Alura's icons</h4>
+						<h5 class="project-subtitle">Illustration</h5>
+					</div>
+				</a>
+			</section class="grid-row">
+		</section>
 
 	</main>
 
 
-	<footer>
-		<div class="container">
+	<footer class="footer">
+		<section class="container contact">
 			<h3>We should get to know each other</h3>
-			<p>I would be glad to talk about new projects, get in touch:</p>
+			<h5>I would be glad to talk about new projects, get in touch:</h5>
 			<a href="mailto:leticialadeiasimoes%40gmail.com?subject=">
-				<h2>leticialadeiasimoes@gmail.com</h2>
+				<h2 class="email">leticialadeiasimoes@gmail.com</h2>
 			</a>
-
-		</div>
+		</section>
 	</footer>
 
     <!--

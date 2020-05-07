@@ -1,0 +1,63 @@
+.site-hero-title {
+	margin-bottom: 40px;
+}
+
+.presentation {
+	margin-bottom: 40px;
+}
+
+.resume {
+	width: 50%;
+}
+
+.resume-title {
+	border-bottom: 3px solid #000;
+	padding-bottom: .5px;
+	display: inline-block;
+}
+
+.resume-text {
+	margin-top: 8px;
+	line-height: 1.6;
+}
+
+.cobli-fundo-img {
+	margin-top: 40px;
+	max-width: 100%;
+}
+
+.dual-maroto {
+	margin: 25px 0;
+}
+
+.cobli-fundo-2-img {
+	max-width: 100%;
+}
+
+
+.dual-maroto .container {
+	display: flex;
+	justify-content: space-between;
+}
+
+.cobli-esquerda-img {
+	width: 48.2%;
+	max-width: 48.2%;
+}
+
+.cobli-direita-img {
+	width: 48.2%;
+	max-width: 48.2%;
+}
+
+.cobli-fundo-last {
+	margin-top: 40px;
+	width: 48.2%;
+	max-width: 48.2%;	
+}
+
+.with-text {
+	display: flex;
+	align-items: center;
+
+}

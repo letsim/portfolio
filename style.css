@@ -2,14 +2,20 @@
 * {
 
 	color: red;
-	font-family: jaf-facitweb, Changa One, sans-serif;
 }
 */
 
 .container {
 	width: 80%;
-	margin: auto;
+	margin: 0 auto;
 }
+
+
+.header {
+	height: 60px;
+	width: 100%;
+}
+
 
 p {
 	font-family: jaf-facitweb, sans-serif;
@@ -17,7 +23,7 @@ p {
 	font-weight: 300;
 	font-style: normal;
 	text-align: left;
-	line-height: 130%;
+	line-height: 1.6;
 	color: black;
 }
 
@@ -28,52 +34,188 @@ h1 {
 	text-align: left;
 }
 
-#navbar {
-	display: block;
-	position: fixed;
+a {
+	font-family: jaf-facitweb, sans-serif; 
+	color: black;
+}
+
+.identity{
+	display: flex;
+	align-items: center;
+}
+
+
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 100%;
 	background-color: white;
 	box-shadow: 0px 1px 0px #DDDDDD;
 }
 
 #nav-name {
-	display: inline-block;
 	font-family: jaf-facitweb, sans-serif;
 	font-weight: 600;
 	font-style: normal;
 	font-size: 18px;
 	color: black;
+	display: flex;
+	align-items: center;
+	margin-left: 12px;
 }
 
-#type-divider {
-	display: inline-block;
-	font-family: jaf-facitweb, sans-serif;
-	font-weight: 600;
-	font-style: normal;
-	color: #E05550;
+#nav-name:after {
+	content: '';
+	background-color: #E05550;
+	height: 17px;
+	width: 2px;
+	margin-left: 10px;
 }
+
 
 #nav-subtitle {
+	font-weight: 300;
 	font-size: 14px;
+	padding-left: 8px;
 }
 
 
+.cv:hover,
+.cv:hover .download-icon {
+	transition: 0.25s ease-in-out;
+	color: #E05550;
+	fill: #E05550;
+}
 
 
-h4 {
+.download-icon {
+	padding-left: 4px;
+}
+
+
+.header-divider {
+	background-color: #E05550;
+	height: 8px;
+	margin-top: 30px;
+	margin-bottom: 64px;
+}
+
+
+.presentation {
+	margin-top: 120px;
+	margin-bottom: 68px;
+}
+
+
+h5 {
 	font-family: jaf-facitweb, sans-serif;
 	font-size: 16px;
 	font-weight: 300;
 	font-style: normal;
-	text-align: left;
 	color: black;
-	line-height: 130%;
+	line-height: 160%;
+	margin-bottom: 12px;
 }
 
 
+/*.work-grid {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}*/
+
+.grid-row{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-bottom: 40px;
+}
 
 
+.frame {
+	background-color: white;
+	border: 1px solid black;
+	border-radius: 2px;
+	text-align: center;
+}
 
+.big-frame {
+	width: 610px;
+	height: 523px;
+}
 
+.small-frame {
+	width: 498px;
+	height: 523px;
+}
+
+.thumbnail {
+	background-color: white;
+	margin-bottom: 34px;
+	height: 399px;
+}
+
+.project-title {
+	font-family: jaf-facitweb, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 20px;
+	color: black;
+	margin-bottom: 12px;
+}
+
+.project-subtitle {
+	color: #9798A6;
+}
+
+.footer {
+	margin-top: 20px;
+}
+
+.contact {
+	text-align: center;
+	padding: 60px 0px 10px 0px;
+}
+
+h3 {
+	font-family: jaf-facitweb, sans-serif;
+	font-size: 20px;
+	font-weight: 400;
+	font-style: normal;
+	color: black;
+	line-height: 160%;
+	margin-bottom: 12px;
+}
+
+h2 {
+	font-family: jaf-facitweb, sans-serif;
+	font-size: 32px;
+	font-weight: 700;
+	font-style: normal;
+	color: black;
+	line-height: 160%;
+	letter-spacing: -0.4px;
+}
+
+.email {
+	margin-bottom: 60px;
+	display: inline-block;
+	text-decoration: underline;
+}
+
+.email:hover {
+	transition: 0.25s ease-in-out;
+	color: #E05550;
+}
+
+h4 {
+	font-family: Facit;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 130%;
+}
 
 
 
