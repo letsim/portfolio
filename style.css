@@ -146,35 +146,49 @@ h5 {
 	padding-bottom: 22px;
 }
 
-.frame a {
-	display: block;
-	width: 100%;
-	height: 100%;
-}
 
 .big-frame {
-	max-width: 56%;
-	/*height: 523px;*/
+	width: 56%;
+	height: 525px;
 }
 
 .small-frame {
-	max-width: calc(44% - 40px);
+	width: calc(44% - 40px);
 }
 
-.thumbnail {
-	background-color: white;
-	margin-bottom: 34px;
-	/*height: 399px;*/
+
+.daily-feed .thumbnail {
+	background-image: url(./img/daily-feed-thumb.png);
+}
+
+.alert-management .thumbnail {
+	background-image: url(./img/alert-management-thumb.png);
+}
+
+.landing-pages .thumbnail {
+	background-image: url(./img/landing-pages-thumb.png);
+}
+
+.site-hero .thumbnail {
+	background-image: url(./img/site-hero-thumb.png);
+}
+
+.retargeting-material .thumbnail {
+	background-image: url(./img/retargeting-material-thumb.png);
+}
+
+.aluras-icons .thumbnail {
+	background-image: url(./img/aluras-icons-thumb.png);
+}
+
+
+.big-frame span, .small-frame span {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
 	display: block;
-}
-
-.big-frame .thumbnail {
-	max-width: 100%;
-}
-
-.small-frame .thumbnail {
-	max-width: 100%;
-	object-fit: cover;
+	width: 100%;
+	height: 80%;
 }
 
 
@@ -184,6 +198,12 @@ h5 {
 	box-shadow: 0px 4px 6px #DDDDDD; 
 	border-color: #E05550;
 }
+
+
+.captionzinha {
+	margin-top: 30px;
+}
+
 
 .project-title {
 	font-family: jaf-facitweb, sans-serif;
