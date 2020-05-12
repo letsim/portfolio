@@ -248,7 +248,13 @@ h2 {
 }
 
 .email {
-	margin-bottom: 60px;
+	font-family: jaf-facitweb, sans-serif;
+	font-size: 32px;
+	font-weight: 700;
+	font-style: normal;
+	letter-spacing: -0.4px;
+	color: black;
+	margin-bottom: 32px;
 	display: inline-block;
 	text-decoration: underline;
 }
@@ -266,8 +272,41 @@ h4 {
 	line-height: 130%;
 }
 
+.disclaimer p {
+	text-align: center;
+}
 
+.social-links a:hover {
+	transition: 0.25s ease-in-out;
+	color: #E05550;
+	fill: #E05550;
+}
 
+.social-nav {
+	align-items: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.social-nav a {
+	display: block;
+	height: 24px;
+	width: 24px;
+	margin: 20px 10px 24px 10px;
+}
+
+.social-nav svg {
+	display: block;
+	height: 100%;
+	width: 100%;
+	fill: #000;
+}
+
+.social-nav svg:hover {
+	transition: 0.25s ease-in-out;
+	fill: #E05550;
+}
 
 
 
