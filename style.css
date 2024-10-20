@@ -23,7 +23,7 @@
 
 
 p {
-	font-family: jaf-facitweb, sans-serif;
+	font-family: Kanit, sans-serif;
 	font-size: 16px;
 	font-weight: 300;
 	font-style: normal;
@@ -33,14 +33,14 @@ p {
 }
 
 h1 {
-	font-family: Changa One, jaf-facitweb, cursive;
+	font-family: Kanit, sans-serif;
 	font-size: 60px;
-	font-weight: 400;
+	font-weight: 800;
 	text-align: left;
 }
 
 a {
-	font-family: jaf-facitweb, sans-serif; 
+	font-family: Kanit, sans-serif; 
 	color: black;
 }
 
@@ -60,8 +60,8 @@ a {
 }
 
 #nav-name {
-	font-family: jaf-facitweb, sans-serif;
-	font-weight: 600;
+	font-family: Kanit, sans-serif;
+	font-weight: 500;
 	font-style: normal;
 	font-size: 18px;
 	color: black;
@@ -101,11 +101,14 @@ a {
 
 .header-divider {
 	background-color: #E05550;
-	height: 8px;
+	height: 4px;
 	margin-top: 30px;
-	margin-bottom: 64px;
+	margin-bottom: 12px;
 }
 
+.overview {
+	margin-top: 40px;
+}
 
 .presentation {
 	margin-top: 120px;
@@ -114,7 +117,7 @@ a {
 
 
 h5 {
-	font-family: jaf-facitweb, sans-serif;
+	font-family: Kanit, sans-serif;
 	font-size: 16px;
 	font-weight: 300;
 	font-style: normal;
@@ -124,17 +127,10 @@ h5 {
 }
 
 
-/*.work-grid {
+.grid {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
-}*/
-
-.grid-row{
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	margin-bottom: 40px;
 }
 
 
@@ -143,17 +139,26 @@ h5 {
 	border: 1px solid black;
 	border-radius: 2px;
 	text-align: center;
-	padding-bottom: 22px;
+	padding-bottom: 16px;
+	margin-bottom: 32px;
 }
 
 
 .big-frame {
 	width: 56%;
-	height: 525px;
+	height: 450px;
+}
+
+.big-frame:nth-child(2n+1) {
+	margin-right: 36px;
 }
 
 .small-frame {
 	width: calc(44% - 40px);
+}
+
+.small-frame:nth-child(2n+1) {
+	margin-right: 36px;
 }
 
 
@@ -206,20 +211,22 @@ h5 {
 
 
 .project-title {
-	font-family: jaf-facitweb, sans-serif;
+	font-family: Kanit, sans-serif;
 	font-weight: 400;
 	font-style: normal;
 	font-size: 20px;
 	color: black;
-	margin-bottom: 12px;
+	margin-bottom: 4px;
 }
 
 .project-subtitle {
 	color: #9798A6;
+	margin-bottom: 4px;
 }
 
 .footer {
 	margin-top: 20px;
+	background-color: #F2F2F2;
 }
 
 .contact {
@@ -228,17 +235,17 @@ h5 {
 }
 
 h3 {
-	font-family: jaf-facitweb, sans-serif;
-	font-size: 20px;
+	font-family: Kanit, sans-serif;
+	font-size: 24px;
 	font-weight: 400;
 	font-style: normal;
 	color: black;
 	line-height: 160%;
-	margin-bottom: 12px;
+	margin-bottom: 4px;
 }
 
 h2 {
-	font-family: jaf-facitweb, sans-serif;
+	font-family: Kanit, sans-serif;
 	font-size: 32px;
 	font-weight: 700;
 	font-style: normal;
@@ -248,7 +255,7 @@ h2 {
 }
 
 .email {
-	font-family: jaf-facitweb, sans-serif;
+	font-family: Kanit, sans-serif;
 	font-size: 32px;
 	font-weight: 700;
 	font-style: normal;
@@ -265,16 +272,13 @@ h2 {
 }
 
 h4 {
-	font-family: Facit;
+	font-family: Kanit, sans-serif;
 	font-style: normal;
 	font-weight: 600;
 	font-size: 20px;
 	line-height: 130%;
 }
 
-.disclaimer p {
-	text-align: center;
-}
 
 .social-links a:hover {
 	transition: 0.25s ease-in-out;
