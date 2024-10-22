@@ -1,28 +1,31 @@
 .site-hero-title {
-	margin-bottom: 40px;
+	margin-bottom: 20px;
 }
 
 .presentation {
 	margin-bottom: 40px;
 }
 
+
 .resume {
+	margin-bottom: 40px;
 	width: 50%;
 }
 
+
 .resume-title {
-	border-bottom: 3px solid #000;
+	border-bottom: 2px solid #000;
 	padding-bottom: .5px;
 	display: inline-block;
+	margin-bottom: 16px;
 }
 
 .resume-text {
-	margin-top: 20px;
+	margin-top: 8px;
 	line-height: 1.6;
 }
 
-.cobli-fundo-img,
-.cobli-fundo-2-img {
+.cobli-fundo-img, .cobli-fundo-2-img {
 	margin-top: 50px;
 	max-width: 100%;
 }
