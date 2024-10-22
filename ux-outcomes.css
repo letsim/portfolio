@@ -1,0 +1,175 @@
+.site-hero-title {
+	margin-bottom: 20px;
+}
+
+.presentation {
+	margin-bottom: 40px;
+}
+
+
+.resume {
+	margin-bottom: 40px;
+}
+
+
+.resume-title {
+	border-bottom: 2px solid #000;
+	padding-bottom: .5px;
+	display: inline-block;
+	margin-bottom: 16px;
+}
+
+.resume-text {
+	margin-top: 8px;
+	line-height: 1.6;
+}
+
+.icon-highlight {
+	margin: 12px 0px 24px 0px;
+	color: #93969D;
+	display: flex;
+	align-items: flex-start;
+}
+
+.icon-highlight:before {
+	content: '';
+	display: block;
+	height: 11px;
+	width: 11px;
+	background-image: url(./img/highlight-icon.svg);
+	background-size: contain;
+	background-repeat: no-repeat;
+	margin: 6px 8px 0px 0px;
+}
+
+
+.dual-maroto {
+	margin: 25px auto;
+	display: flex;
+	justify-content: space-between;
+}
+
+
+.coluna-esquerda, .coluna-direita {
+	width: 46.2%;
+	max-width: 46.2%;
+}
+
+
+.segmentation-img {
+	max-width: 100%;
+}
+
+.gray-section {
+	background-color: #F2F2F2;
+	padding: 40px 0px;
+	margin-bottom: 40px;
+}
+
+.highlight {
+	font-weight: 500;
+}
+
+.perspectives {
+	margin: 40px 0px 12px 0px;
+}
+
+
+.quotation {
+	font-weight: 300;
+	font-style: italic;
+	display: flex;
+	align-items: flex-start;
+	border-left: 2.5px solid #E05550;
+	padding-left: 14px;
+	margin: 16px 0px;
+}
+
+/*
+.quotation:before {
+	content: '';
+	border: 2px solid #E05550;
+	margin-right: 14px;
+}
+*/
+
+.postit {
+	margin-top: 8px;
+	margin-bottom: 40px;
+}
+
+
+.lista-ordenada {
+	display: flex;
+	justify-content: space-between;
+}
+
+.postit-goals li, .postit-findings li {
+	width: calc(33.3% - 15px);
+	box-sizing: border-box;
+	background-color: rgba(255, 213, 79, 0.5);
+	padding: 20px 32px 32px 32px;
+}
+
+.postit-methods li {
+	width: calc(33.3% - 15px);
+	box-sizing: border-box;
+	background-color: rgba(255);
+	border: 4px solid rgba(255, 213, 79, 0.5);
+	padding: 20px 32px 32px 32px;
+}
+
+.framework-blocks li {
+	background-color: rgba(255);
+	border: 4px solid rgba(255, 213, 79, 0.5);
+	padding: 40px 32px;
+	margin-bottom: 20px;
+}
+
+.framework-blocks li:nth-child(2) {
+	border-color: rgba(255, 134, 22, 0.5);
+}
+
+.framework-blocks li:nth-child(3) {
+	border-color: rgba(224, 85, 80, 0.5);
+}
+
+.postit-title {
+	margin-bottom: 12px;
+}
+
+.postit-title, .postit-content {
+	font-weight: 500;
+}
+
+.process-description p {
+	margin-bottom: 12px;
+}
+
+.gaps {
+	font-weight: 300;
+	color: #93969D;
+}
+
+.external-ref, .external-link {
+	font-weight: 300;
+	font-style: normal;
+	margin-top: 12px;
+}
+
+.external-link {
+	border-bottom: 1px solid #000000;
+}
+
+
+.test img {
+	margin-top: 20px;
+	max-width: 100%;
+}
+
+
+.with-text {
+	display: flex;
+	align-items: center;
+
+}
