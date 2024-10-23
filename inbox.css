@@ -45,15 +45,18 @@
 .dual-maroto {
 	margin: 0px auto;
 	display: flex;
-	justify-content: flex-start;
+	justify-content: space-between;
 }
 
+.dual-imagens {
+	justify-content: space-evenly;
+}
 
 .coluna-esquerda, .coluna-direita {
 	width: 46.2%;
 	max-width: 46.2%;
-	margin: 0 12px;
 }
+
 
 .gray-section {
 	background-color: #F2F2F2;
