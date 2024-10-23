@@ -53,13 +53,9 @@
 .coluna-esquerda, .coluna-direita {
 	width: 46.2%;
 	max-width: 46.2%;
-	margin-bottom: 12px;
+	margin-bottom: 24px;
 }
 
-
-.segmentation-img {
-	max-width: 100%;
-}
 
 .gray-section {
 	background-color: #F2F2F2;
