@@ -13,7 +13,7 @@
 
 
 .resume-title {
-	border-bottom: 2px solid #000;
+	border-bottom: 1px solid #000;
 	padding-bottom: .5px;
 	display: inline-block;
 	margin-bottom: 16px;
@@ -53,6 +53,7 @@
 .coluna-esquerda, .coluna-direita {
 	width: 46.2%;
 	max-width: 46.2%;
+	margin-bottom: 12px;
 }
 
 
@@ -145,6 +146,12 @@
 
 .process-description p {
 	margin-bottom: 12px;
+}
+
+.process-description img {
+	max-width: 100%;
+	display: block;
+	margin: 0 auto 24px;
 }
 
 .gaps {
