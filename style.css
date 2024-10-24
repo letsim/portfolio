@@ -162,6 +162,14 @@ h5 {
 }
 
 
+.ux-outcomes .thumbnail {
+	background-image: url(./img/ux-outcomes-thumb.png);
+}
+
+.inbox .thumbnail {
+	background-image: url(./img/inbox-thumb.png);
+}
+
 .daily-feed .thumbnail {
 	background-image: url(./img/daily-feed-thumb.png);
 }
