@@ -204,9 +204,11 @@ h5 {
 	height: 80%;
 }
 
+.frame {
+	transition: 0.5s ease-in-out;
+}
 
 .frame:hover {
-	transition: 0.5s ease-in-out;
 	transform: scale(1.02);
 	box-shadow: 0px 4px 6px #DDDDDD; 
 	border-color: #E05550;
