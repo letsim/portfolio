@@ -21,7 +21,7 @@
 .resume-text {
 	margin-top: 8px;
 	line-height: 1.6;
-	margin-bottom: 20
+	margin-bottom: 20px;
 }
 
 .landing-pages-heatmap {
@@ -46,7 +46,6 @@
 
 .cobli-esquerda-img {
 	max-width: 130%;
-	position: ;
 }
 
 .cobli-direita-img {
