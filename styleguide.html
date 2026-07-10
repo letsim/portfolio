@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="robots" content="noindex, nofollow">
+	<title>Style Guide (internal reference — not part of the site)</title>
+	<link rel="stylesheet" type="text/css" href="reset.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<link rel="stylesheet" href="https://use.typekit.net/idf7hjc.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+		rel="stylesheet">
+
+	<style>
+		/* Guide-only scaffolding. All wrappers are prefixed sg- so they never collide with real site classes. */
+		body {
+			background: #fafafa;
+			padding-bottom: 120px;
+		}
+
+		.sg-banner {
+			background: #111;
+			color: #fff;
+			text-align: center;
+			padding: 10px 16px;
+			font-family: monospace;
+			font-size: 13px;
+			position: relative;
+		}
+
+		.sg-wrap {
+			width: 90%;
+			max-width: 960px;
+			margin: 0 auto;
+		}
+
+		.sg-intro {
+			margin-top: 40px;
+			margin-bottom: 40px;
+			font-family: monospace;
+			font-size: 14px;
+			line-height: 1.6;
+			color: #333;
+		}
+
+		.sg-nav {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 8px 16px;
+			margin-bottom: 60px;
+			font-family: monospace;
+			font-size: 13px;
+		}
+
+		.sg-nav a {
+			color: #333;
+			text-decoration: underline;
+		}
+
+		.sg-section {
+			margin-bottom: 72px;
+			border-top: 3px solid #111;
+			padding-top: 16px;
+		}
+
+		.sg-section-title {
+			font-family: monospace;
+			font-size: 22px;
+			font-weight: 700;
+			margin-bottom: 6px;
+		}
+
+		.sg-section-desc {
+			font-family: monospace;
+			font-size: 13px;
+			color: #555;
+			margin-bottom: 28px;
+			max-width: 720px;
+			line-height: 1.5;
+		}
+
+		.sg-note {
+			display: inline-block;
+			font-family: monospace;
+			font-size: 12px;
+			color: #7a4b00;
+			background: #fff3cd;
+			border: 1px solid #e0b84b;
+			padding: 4px 8px;
+			margin-bottom: 28px;
+			border-radius: 3px;
+		}
+
+		.sg-item {
+			margin-bottom: 40px;
+		}
+
+		.sg-item-label {
+			font-family: monospace;
+			font-size: 13px;
+			font-weight: 700;
+			color: #111;
+			margin-bottom: 10px;
+			text-transform: uppercase;
+			letter-spacing: 0.02em;
+		}
+
+		.sg-preview {
+			border: 1px dashed #bbb;
+			background: #fff;
+			padding: 24px;
+			margin-bottom: 10px;
+			overflow: auto;
+		}
+
+		.sg-preview.sg-preview-nopad {
+			padding: 0;
+		}
+
+		.sg-code {
+			background: #1e1e1e;
+			color: #d4d4d4;
+			font-family: "SF Mono", Consolas, monospace;
+			font-size: 12px;
+			line-height: 1.6;
+			padding: 14px 16px;
+			overflow-x: auto;
+			white-space: pre;
+			border-radius: 4px;
+		}
+
+		.sg-swatch-row {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 16px;
+		}
+
+		.sg-swatch {
+			width: 140px;
+			font-family: monospace;
+			font-size: 11px;
+		}
+
+		.sg-swatch-color {
+			height: 60px;
+			border-radius: 4px;
+			border: 1px solid rgba(0, 0, 0, 0.15);
+			margin-bottom: 6px;
+		}
+
+		.sg-spacing-row {
+			display: flex;
+			align-items: flex-end;
+			gap: 12px;
+			flex-wrap: wrap;
+			margin-bottom: 10px;
+		}
+
+		.sg-spacing-item {
+			font-family: monospace;
+			font-size: 11px;
+			text-align: center;
+		}
+
+		.sg-spacing-bar {
+			background: #E05550;
+			width: 24px;
+			margin-bottom: 4px;
+		}
+
+		/* Trimmed 2-card work-grid preview, isolated so it doesn't fight the real .grid layout expectations */
+		.sg-grid-demo {
+			display: flex;
+			gap: 24px;
+		}
+
+		.sg-grid-demo .frame {
+			margin-bottom: 0;
+			flex: 1;
+			height: 220px;
+		}
+
+		.sg-grid-demo .thumbnail {
+			background: #ddd;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="sg-banner">
+		INTERNAL REFERENCE — not linked from the site, noindex, not a project page
+	</div>
+
+	<div class="sg-wrap">
+
+		<div class="sg-intro">
+			Living style guide for the components actually in use across this portfolio's HTML/CSS.
+			Every snippet below is copy-pasted verbatim from a real page (mostly <code>index.html</code>
+			and <code>ux-outcomes.html</code>) — paste it as-is and it'll match production.
+			<br><br>
+			This page loads the real <code>reset.css</code> + <code>style.css</code>, so what you see
+			rendered is the actual site styling, not a mockup.
+		</div>
+
+		<nav class="sg-nav">
+			<a href="#typography">Typography</a>
+			<a href="#buttons">Buttons / CTA</a>
+			<a href="#links">Links</a>
+			<a href="#layout">Layout / major sections</a>
+			<a href="#case-study">Case-study component vocabulary</a>
+			<a href="#colors">Color palette</a>
+			<a href="#spacing">Spacing scale</a>
+		</nav>
+
+		<!-- ============================================================ -->
+		<section class="sg-section" id="typography">
+			<div class="sg-section-title">1. Typography</div>
+			<div class="sg-section-desc">
+				Only font in real use is Google Fonts <strong>Kanit</strong>. The Adobe Typekit kit
+				(<code>idf7hjc</code>, loaded in every page's &lt;head&gt;) is never referenced by any
+				<code>font-family</code> rule in the stylesheets — it appears to be an unused leftover.
+			</div>
+
+			<div class="sg-item">
+				<div class="sg-item-label">h1 — Kanit 60px / weight 800</div>
+				<div class="sg-preview"><h1>Hi, my name is Letícia</h1></div>
+				<div class="sg-code">&lt;h1&gt;Hi, my name is Letícia&lt;/h1&gt;</div>
+			</div>
+
+			<div class="sg-item">
+				<div class="sg-item-label">h2 — Kanit 32px / weight 700 / letter-spacing -0.4px</div>
+				<div class="sg-preview"><h2>Section heading</h2></div>
+				<div class="sg-code">&lt;h2&gt;Section heading&lt;/h2&gt;</div>
+			</div>
+
+			<div class="sg-item">
+				<div class="sg-item-label">h3 — Kanit 24px / weight 400 / line-height 160%</div>
+				<div class="sg-preview"><h3>We should get to know each other</h3></div>
+				<div class="sg-code">&lt;h3&gt;We should get to know each other&lt;/h3&gt;</div>
+			</div>
+
+			<div class="sg-item">
+				<div class="sg-item-label">h4 — Kanit 20px / weight 600 / line-height 130% (usually paired with .project-title, weight 400)</div>
+				<div class="sg-preview"><h4 class="project-title">Resume</h4></div>
+				<div class="sg-code">&lt;h4 class="project-title"&gt;Resume&lt;/h4&gt;</div>
+			</div>
+
+			<div class="sg-item">
+				<div class="sg-item-label">h5 — Kanit 16px / weight 300 / line-height 160%</div>
+				<div class="sg-preview"><h5>UX/UI Designer @ Montréal, Canada</h5></div>
+				<div class="sg-code">&lt;h5&gt;UX/UI Designer @ Montréal, Canada&lt;/h5&gt;</div>
+			</div>
+
+			<div class="sg-item">
+				<div class="sg-item-label">p (body copy) — Kanit 16px / weight 300 / line-height 1.6</div>
+				<div class="sg-preview">
+					<p>Over 6 years of experience as user advocate in a diverse range of digital products.</p>
+				</div>
+				<div class="sg-code">&lt;p&gt;Over 6 years of experience as user advocate...&lt;/p&gt;</div>
+			</div>
+
+			<div class="sg-item">
+				<div class="sg-item-label">a (base) — Kanit, color black, no default hover (hover states are per-class, see Links)</div>
+				<div class="sg-preview"><a href="#">Plain link text</a></div>
+				<div class="sg-code">&lt;a href="#"&gt;Plain link text&lt;/a&gt;</div>
+			</div>
+		</section>
+
+		<!-- ============================================================ -->
+		<section class="sg-section" id="buttons">
+			<div class="sg-section-title">2. Buttons / CTA</div>
+			<div class="sg-section-desc">
+				There is no dedicated <code>.btn</code>/<code>.button</code> class anywhere in the
+				codebase (confirmed via grep). The CV download link is the only button-like pattern:
+				a plain black text + SVG icon pairing with no border/background/padding, where both
+				text color and icon fill transition together to brand red <code>#E05550</code> on hover.
+			</div>
+
+			<div class="sg-item">
+				<div class="sg-item-label">.cv — CTA link (style.css:89-99)</div>
+				<div class="sg-preview">
+					<a class="cv" href="./files/leticia-simoes-CV.pdf">
+						<span>CV</span>
+						<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path class="download-icon"
+								d="M12 6L10.9425 4.9425L6.75 9.1275V0H5.25V9.1275L1.065 4.935L0 6L6 12L12 6Z" fill="#010101" />
+						</svg>
+					</a>
+				</div>
+				<div class="sg-code">&lt;a class="cv" href="./files/leticia-simoes-CV.pdf"&gt;
+	&lt;span&gt;CV&lt;/span&gt;
+	&lt;svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+		&lt;path class="download-icon"
+			d="M12 6L10.9425 4.9425L6.75 9.1275V0H5.25V9.1275L1.065 4.935L0 6L6 12L12 6Z" fill="#010101" /&gt;
+	&lt;/svg&gt;
+&lt;/a&gt;</div>
+			</div>
+		</section>
+
+		<!-- ============================================================ -->
+		<section class="sg-section" id="links">
+			<div class="sg-section-title">3. Links</div>
+			<div class="sg-section-desc">
+				Each link variant is a separate class layered on the plain <code>a</code> base —
+				there's no generic hover rule at the <code>a</code> level.
+			</div>
+
+			<div class="sg-note">
+				⚠ Dead CSS: <code>.social-links a:hover</code> in style.css:293-297 targets a class
+				(<code>.social-links</code>) that appears nowhere in the markup — the real class used
+				is <code>.social-nav</code>. That rule never fires.
+			</div>
+
+			<div class="sg-item">
+				<div class="sg-item-label">.email — large underlined mailto link, hovers to brand red</div>
+				<div class="sg-preview">
+					<a class="email" href="mailto:leticialadeiasimoes%40gmail.com?subject="> leticialadeiasimoes@gmail.com </a>
+				</div>
+				<div class="sg-code">&lt;a class="email" href="mailto:leticialadeiasimoes%40gmail.com?subject="&gt;
+	leticialadeiasimoes@gmail.com
+&lt;/a&gt;</div>
+			</div>
+
+			<div class="sg-item">
+				<div class="sg-item-label">.identity — logo + name lockup (header)</div>
+				<div class="sg-preview">
+					<a class="identity" href="./index.html">
+						<img class="logo" src="./img/identity-red.svg" width="32px" alt="">
+						<span id="nav-name">Letícia Simões</span>
+						<span id="nav-subtitle">UX/UI Designer</span>
+					</a>
+				</div>
+				<div class="sg-code">&lt;a class="identity" href="./index.html"&gt;
+	&lt;img class="logo" src="./img/identity-red.svg" width="32px"&gt;
+	&lt;span id="nav-name"&gt;Letícia Simões&lt;/span&gt;
+	&lt;span id="nav-subtitle"&gt;UX/UI Designer&lt;/span&gt;
+&lt;/a&gt;</div>
+			</div>
+
+			<div class="sg-item">
+				<div class="sg-item-label">.external-link — in-copy citation link, underline via border-bottom (color/border value varies slightly per page)</div>
+				<div class="sg-preview">
+					<p>We used <a class="external-link" href="#">Jared Spool's UX Outcomes</a> methodology.</p>
+				</div>
+				<div class="sg-code">&lt;p&gt;We used &lt;a class="external-link" href="..."&gt;Jared Spool's UX Outcomes&lt;/a&gt; methodology.&lt;/p&gt;</div>
+			</div>
+
+			<div class="sg-item">
+				<div class="sg-item-label">.social-nav — icon links (linkedin / dribbble), svg fill hovers to brand red</div>
+				<div class="sg-preview">
+					<nav class="social-nav">
+						<a class="linkedin" href="https://www.linkedin.com/in/letls/">
+							<svg class="social-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 170.079 170.079">
+								<rect x="1.936" y="1.936" width="166.208" height="166.208" rx="9.741" />
+								<rect x="27.448" y="64.78" width="24.944" height="79.628" fill="#fff" />
+								<circle cx="39.92" cy="39.931" r="14.261" transform="translate(-16.543 39.923) rotate(-45)" fill="#fff" />
+								<path
+									d="M134.534,68.837c-5.191-4.789-14.683-6.886-24.382-5.626-8.95,1.569-14.566,6.014-18.9,13.011V64.78H67.562v79.628h24.8l.206-42.749c.105-4.219.52-16.285,14.3-16.847,12.578,0,12.8,11.8,12.8,16.847v42.749h24.744V101.659h0C144.419,87.963,143.807,77.582,134.534,68.837Z"
+									fill="#fff" />
+							</svg>
+						</a>
+						<a class="dribbble" href="https://dribbble.com/let-ls">
+							<svg class="social-logo" width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M50 0C22.397 0 0 22.397 0 50C0 77.603 22.397 100 50 100C77.5488 100 100 77.603 100 50C100 22.397 77.5488 0 50 0ZM83.026 23.0477C88.9913 30.3145 92.5705 39.5879 92.679 49.6204C91.269 49.3492 77.1692 46.4751 62.961 48.2646C62.6356 47.5597 62.3644 46.8004 62.0391 46.0412C61.1714 43.9805 60.1952 41.8655 59.2191 39.859C74.9458 33.4599 82.1041 24.2408 83.026 23.0477ZM50 7.37527C60.846 7.37527 70.7701 11.4425 78.308 18.1128C77.5488 19.1974 71.0954 27.82 55.9111 33.5141C48.9154 20.6616 41.1605 10.141 39.9675 8.5141C43.167 7.75488 46.5293 7.37527 50 7.37527ZM31.833 11.3883C32.9718 12.9067 40.564 23.4816 47.6681 36.0629C27.7115 41.3774 10.0868 41.269 8.18872 41.269C10.9544 28.0369 19.9024 17.0282 31.833 11.3883ZM7.26681 50.0542C7.26681 49.6204 7.26681 49.1866 7.26681 48.7527C9.11063 48.8069 29.8265 49.0781 51.1388 42.679C52.3861 45.0651 53.5249 47.5054 54.6095 49.9458C54.0672 50.1085 53.4707 50.2712 52.9284 50.4338C30.9111 57.538 19.1974 76.9523 18.2213 78.5792C11.4425 71.0412 7.26681 61.0087 7.26681 50.0542ZM50 92.7332C40.1302 92.7332 31.0195 89.3709 23.8069 83.731C24.5662 82.1584 33.243 65.4555 57.321 57.0499C57.4295 56.9957 57.4837 56.9957 57.5922 56.9414C63.6117 72.5054 66.0521 85.5748 66.7028 89.3167C61.551 91.5401 55.9111 92.7332 50 92.7332ZM73.807 85.4122C73.3731 82.8091 71.0955 70.3362 65.5098 54.9892C78.9046 52.8742 90.6182 56.3449 92.0824 56.833C90.2386 68.7093 83.4056 78.9588 73.807 85.4122Z" />
+							</svg>
+						</a>
+					</nav>
+				</div>
+				<div class="sg-code">&lt;nav class="social-nav"&gt;
+	&lt;a class="linkedin" href="https://www.linkedin.com/in/letls/"&gt;&lt;svg class="social-logo"&gt;...&lt;/svg&gt;&lt;/a&gt;
+	&lt;a class="dribbble" href="https://dribbble.com/let-ls"&gt;&lt;svg class="social-logo"&gt;...&lt;/svg&gt;&lt;/a&gt;
+&lt;/nav&gt;</div>
+			</div>
+		</section>
+
+		<!-- ============================================================ -->
+		<section class="sg-section" id="layout">
+			<div class="sg-section-title">4. Layout / major sections</div>
+			<div class="sg-section-desc">
+				<code>.container</code> (width 80%, centered) is the base wrapper used inside every
+				major section below.
+			</div>
+
+			<div class="sg-item">
+				<div class="sg-item-label">.header / .navbar — fixed top bar, identical on every page</div>
+				<div class="sg-code">&lt;header class="header"&gt;
+	&lt;div class="container navbar"&gt;
+		&lt;a class="identity" href="./index.html"&gt;...&lt;/a&gt;
+		&lt;a class="cv" href="./files/leticia-simoes-CV.pdf"&gt;...&lt;/a&gt;
+	&lt;/div&gt;
+&lt;/header&gt;</div>
+			</div>
+
+			<div class="sg-item">
+				<div class="sg-item-label">.presentation — homepage hero variant (margin-top 120px / margin-bottom 68px)</div>
+				<div class="sg-preview">
+					<section class="presentation">
+						<div class="container">
+							<h1>Hi, my name is Letícia</h1>
+							<div class="header-divider"></div>
+							<h5>UX/UI Designer @ Montréal, Canada</h5>
+						</div>
+					</section>
+				</div>
+				<div class="sg-code">&lt;section class="presentation"&gt;
+	&lt;div class="container"&gt;
+		&lt;h1&gt;Hi, my name is Letícia&lt;/h1&gt;
+		&lt;div class="header-divider"&gt;&lt;/div&gt;
+		&lt;h5&gt;UX/UI Designer @ Montréal, Canada&lt;/h5&gt;
+	&lt;/div&gt;
+&lt;/section&gt;</div>
+			</div>
+
+			<div class="sg-item">
+				<div class="sg-item-label">.presentation — case-study header variant (margin-bottom 40px only, identical across all 8 per-page CSS files)</div>
+				<div class="sg-preview">
+					<section class="presentation" style="margin-top:0;">
+						<div class="container">
+							<h1 class="site-hero-title" style="font-size:40px;">Inbox</h1>
+							<h5 class="project-subtitle">UX case</h5>
+						</div>
+					</section>
+				</div>
+				<div class="sg-code">&lt;section class="presentation"&gt;
+	&lt;div class="container"&gt;
+		&lt;h1 class="site-hero-title"&gt;Inbox&lt;/h1&gt;
+		&lt;h5 class="project-subtitle"&gt;UX case&lt;/h5&gt;
+	&lt;/div&gt;
+&lt;/section&gt;</div>
+			</div>
+
+			<div class="sg-item">
+				<div class="sg-item-label">.grid / .frame / .big-frame / .small-frame — homepage work-grid card (trimmed to 2 cards; real grid has 6 live + 2 commented out)</div>
+				<div class="sg-preview sg-grid-demo">
+					<div class="frame big-frame">
+						<a class="link-images-background" href="#">
+							<span class="thumbnail"></span>
+							<div class="captionzinha">
+								<h4 class="project-title">UX outcomes collaboration</h4>
+								<h5 class="project-subtitle">UX case</h5>
+							</div>
+						</a>
+					</div>
+					<div class="frame small-frame">
+						<a class="link-images-background" href="#">
+							<span class="thumbnail"></span>
+							<div class="captionzinha">
+								<h4 class="project-title">Inbox</h4>
+								<h5 class="project-subtitle">UX case</h5>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="sg-code">&lt;ul class="grid"&gt;
+	&lt;li class="frame big-frame"&gt;
+		&lt;a class="link-images-background ux-outcomes" href="./ux-outcomes.html"&gt;
+			&lt;span class="thumbnail"&gt;&lt;/span&gt;
+			&lt;div class="captionzinha"&gt;
+				&lt;h4 class="project-title"&gt;UX outcomes collaboration&lt;/h4&gt;
+				&lt;h5 class="project-subtitle"&gt;UX case&lt;/h5&gt;
+			&lt;/div&gt;
+		&lt;/a&gt;
+	&lt;/li&gt;
+	&lt;!-- .big-frame or .small-frame, repeat per project.
+	     Each project also needs a dedicated
+	     ".[project-slug] .thumbnail { background-image: url(...) }" rule in style.css --&gt;
+&lt;/ul&gt;</div>
+			</div>
+
+			<div class="sg-item">
+				<div class="sg-item-label">.footer / .contact — identical on every page</div>
+				<div class="sg-code">&lt;footer class="footer"&gt;
+	&lt;section class="container contact"&gt;
+		&lt;h3&gt;We should get to know each other&lt;/h3&gt;
+		&lt;h5&gt;I would be glad to talk about new projects, get in touch:&lt;/h5&gt;
+		&lt;a class="email" href="mailto:leticialadeiasimoes%40gmail.com?subject="&gt;leticialadeiasimoes@gmail.com&lt;/a&gt;
+		&lt;nav class="social-nav"&gt;...&lt;/nav&gt;
+	&lt;/section&gt;
+&lt;/footer&gt;</div>
+			</div>
+		</section>
+
+		<!-- ============================================================ -->
+		<section class="sg-section" id="case-study">
+			<div class="sg-section-title">5. Case-study component vocabulary</div>
+			<div class="sg-section-desc">
+				Every case-study page is assembled from this same class vocabulary — but instead of
+				living once in <code>style.css</code>, it's copy-pasted identically into all 8 per-page
+				CSS files (ux-outcomes, inbox, daily-feed, alert-management, landing-pages,
+				retargeting-material, site-hero, aluras-icons).
+			</div>
+			<div class="sg-note">
+				⚠ Duplicated across all 8 per-page CSS files — candidate to consolidate into
+				<code>style.css</code>. Some values drift slightly between pages (e.g. two-column
+				widths appear as 46.2%, 48.2%, or 40.2% depending on the file) — noted as an
+				inconsistency, not resolved here.
+			</div>
+
+			<div class="sg-item">
+				<div class="sg-item-label">.resume / .resume-title / .resume-text — intro summary block</div>
+				<div class="sg-preview">
+					<h4 class="project-title resume-title">Resume</h4>
+					<p class="resume-text">To increase the UX's strategic role in our trio structure at GoTo, we used UX outcomes as a catalyst to define our success.</p>
+				</div>
+				<div class="sg-code">&lt;div class="resume"&gt;
+	&lt;h4 class="project-title resume-title"&gt;Resume&lt;/h4&gt;
+	&lt;p class="resume-text"&gt;...&lt;/p&gt;
+&lt;/div&gt;</div>
+			</div>
+
+			<div class="sg-item">
+				<div class="sg-item-label">.gray-section + .dual-maroto + .coluna-esquerda/.coluna-direita — two-column block on gray background</div>
+				<div class="sg-preview sg-preview-nopad">
+					<section class="gray-section">
+						<section class="container">
+							<section class="dual-maroto">
+								<section class="coluna-esquerda">
+									<h4 class="project-title">What</h4>
+									<p>Define metrics to assess feature performance through a user-centric lens.</p>
+								</section>
+								<section class="coluna-direita">
+									<h4 class="project-title">Why</h4>
+									<p>Justifying UX ROI is easier when metrics reflect experience aspects stakeholders can see.</p>
+								</section>
+							</section>
+						</section>
+					</section>
+				</div>
+				<div class="sg-code">&lt;section class="gray-section"&gt;
+	&lt;section class="container"&gt;
+		&lt;section class="dual-maroto"&gt;
+			&lt;section class="coluna-esquerda"&gt;
+				&lt;h4 class="project-title"&gt;What&lt;/h4&gt;
+				&lt;p&gt;...&lt;/p&gt;
+			&lt;/section&gt;
+			&lt;section class="coluna-direita"&gt;
+				&lt;h4 class="project-title"&gt;Why&lt;/h4&gt;
+				&lt;p&gt;...&lt;/p&gt;
+			&lt;/section&gt;
+		&lt;/section&gt;
+	&lt;/section&gt;
+&lt;/section&gt;</div>
+			</div>
+
+			<div class="sg-item">
+				<div class="sg-item-label">.quotation — pull quote, red left border</div>
+				<div class="sg-preview">
+					<p class="quotation">"Success metrics are the finish line on a race."</p>
+				</div>
+				<div class="sg-code">&lt;p class="quotation"&gt;"Success metrics are the finish line on a race."&lt;/p&gt;</div>
+			</div>
+
+			<div class="sg-item">
+				<div class="sg-item-label">.postit / .postit-goals li — sticky-note card grid (yellow, translucent)</div>
+				<div class="sg-preview">
+					<ol class="lista-ordenada postit-goals" style="list-style:none; display:flex; gap:15px;">
+						<li style="width:calc(33.3% - 15px); box-sizing:border-box; background-color: rgba(255, 213, 79, 0.5); padding:20px 32px 32px 32px; box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;">
+							<p class="postit-content">If we do a great job on...<br><span class="gaps">(feature)</span></p>
+						</li>
+					</ol>
+				</div>
+				<div class="sg-code">&lt;section class="postit"&gt;
+	&lt;ol class="lista-ordenada postit-goals"&gt;
+		&lt;li&gt;
+			&lt;p class="postit-content"&gt;
+				If we do a great job on...
+				&lt;br&gt;
+				&lt;span class="gaps"&gt;(feature, product or service)&lt;/span&gt;
+			&lt;/p&gt;
+		&lt;/li&gt;
+		&lt;!-- repeat li for each note --&gt;
+	&lt;/ol&gt;
+&lt;/section&gt;</div>
+			</div>
+
+			<div class="sg-item">
+				<div class="sg-item-label">.framework-blocks li — 3-step sequence, border color cycles red → orange → brand-red</div>
+				<div class="sg-preview">
+					<ul style="list-style:none; display:flex; gap:20px;">
+						<li style="background-color: rgba(255); border:4px solid rgba(255, 213, 79, 0.5); padding:24px; flex:1;">Step 1</li>
+						<li style="background-color: rgba(255); border:4px solid rgba(255, 134, 22, 0.5); padding:24px; flex:1;">Step 2</li>
+						<li style="background-color: rgba(255); border:4px solid rgba(224, 85, 80, 0.5); padding:24px; flex:1;">Step 3</li>
+					</ul>
+				</div>
+				<div class="sg-code">&lt;ul class="framework-blocks"&gt;
+	&lt;li&gt;Step 1&lt;/li&gt;   &lt;!-- border: rgba(255,213,79,.5) yellow --&gt;
+	&lt;li&gt;Step 2&lt;/li&gt;   &lt;!-- border: rgba(255,134,22,.5) orange, via :nth-child(2) --&gt;
+	&lt;li&gt;Step 3&lt;/li&gt;   &lt;!-- border: rgba(224,85,80,.5) red, via :nth-child(3) --&gt;
+&lt;/ul&gt;</div>
+			</div>
+
+			<div class="sg-item">
+				<div class="sg-item-label">.icon-highlight — bullet row with small SVG bullet icon + muted gray text</div>
+				<div class="sg-code">&lt;p class="icon-highlight"&gt;Key frustration identified during research&lt;/p&gt;
+&lt;!-- :before pseudo-element injects ./img/highlight-icon.svg as the bullet --&gt;</div>
+			</div>
+
+			<div class="sg-item">
+				<div class="sg-item-label">.highlight / .gaps / .external-ref — inline text modifiers used inside body copy</div>
+				<div class="sg-preview">
+					<p><span class="highlight">Awareness:</span> clearer data helps the team see impact. <span class="gaps">(placeholder text)</span></p>
+				</div>
+				<div class="sg-code">&lt;p&gt;&lt;span class="highlight"&gt;Awareness:&lt;/span&gt; ...&lt;span class="gaps"&gt;(placeholder)&lt;/span&gt;&lt;/p&gt;</div>
+			</div>
+		</section>
+
+		<!-- ============================================================ -->
+		<section class="sg-section" id="colors">
+			<div class="sg-section-title">6. Color palette</div>
+			<div class="sg-section-desc">No CSS custom properties are used anywhere — every value below is a hard-coded literal repeated across files.</div>
+
+			<div class="sg-note">
+				⚠ Two competing "muted gray" values are both in active use: <code>#9798A6</code>
+				(.project-subtitle) and <code>#93969D</code> (.icon-highlight / .gaps / .external-ref
+				in most, but not all, per-page files). Likely drift, not intentional — flagged, not merged.
+			</div>
+
+			<div class="sg-swatch-row">
+				<div class="sg-swatch">
+					<div class="sg-swatch-color" style="background:#E05550;"></div>
+					#E05550<br>brand red — hovers, dividers, accents
+				</div>
+				<div class="sg-swatch">
+					<div class="sg-swatch-color" style="background:#000000;"></div>
+					#000000<br>primary text / borders
+				</div>
+				<div class="sg-swatch">
+					<div class="sg-swatch-color" style="background:#ffffff; border:1px solid #ccc;"></div>
+					#FFFFFF<br>header / card background
+				</div>
+				<div class="sg-swatch">
+					<div class="sg-swatch-color" style="background:#F2F2F2;"></div>
+					#F2F2F2<br>footer / gray-section background
+				</div>
+				<div class="sg-swatch">
+					<div class="sg-swatch-color" style="background:#DDDDDD;"></div>
+					#DDDDDD<br>shadows, dividers
+				</div>
+				<div class="sg-swatch">
+					<div class="sg-swatch-color" style="background:#9798A6;"></div>
+					#9798A6<br>.project-subtitle text
+				</div>
+				<div class="sg-swatch">
+					<div class="sg-swatch-color" style="background:#93969D;"></div>
+					#93969D<br>.icon-highlight/.gaps text (drift from above)
+				</div>
+				<div class="sg-swatch">
+					<div class="sg-swatch-color" style="background:rgba(255, 213, 79, 0.5);"></div>
+					rgba(255,213,79,.5)<br>postit / framework step 1
+				</div>
+				<div class="sg-swatch">
+					<div class="sg-swatch-color" style="background:rgba(255, 134, 22, 0.5);"></div>
+					rgba(255,134,22,.5)<br>framework step 2
+				</div>
+				<div class="sg-swatch">
+					<div class="sg-swatch-color" style="background:rgba(224, 85, 80, 0.5);"></div>
+					rgba(224,85,80,.5)<br>framework step 3
+				</div>
+			</div>
+		</section>
+
+		<!-- ============================================================ -->
+		<section class="sg-section" id="spacing">
+			<div class="sg-section-title">7. Spacing scale</div>
+			<div class="sg-section-desc">Recurring margin/padding values found across style.css and the per-page CSS files. 8/16/20/24/32/40px form the base rhythm; 40px is the single most-repeated block-spacing value.</div>
+
+			<div class="sg-spacing-row">
+				<div class="sg-spacing-item"><div class="sg-spacing-bar" style="height:4px;"></div>4px</div>
+				<div class="sg-spacing-item"><div class="sg-spacing-bar" style="height:8px;"></div>8px</div>
+				<div class="sg-spacing-item"><div class="sg-spacing-bar" style="height:12px;"></div>12px</div>
+				<div class="sg-spacing-item"><div class="sg-spacing-bar" style="height:16px;"></div>16px</div>
+				<div class="sg-spacing-item"><div class="sg-spacing-bar" style="height:20px;"></div>20px</div>
+				<div class="sg-spacing-item"><div class="sg-spacing-bar" style="height:24px;"></div>24px</div>
+				<div class="sg-spacing-item"><div class="sg-spacing-bar" style="height:32px;"></div>32px</div>
+				<div class="sg-spacing-item"><div class="sg-spacing-bar" style="height:40px;"></div>40px</div>
+				<div class="sg-spacing-item"><div class="sg-spacing-bar" style="height:60px;"></div>60px</div>
+				<div class="sg-spacing-item"><div class="sg-spacing-bar" style="height:80px;"></div>60/68px≈</div>
+				<div class="sg-spacing-item"><div class="sg-spacing-bar" style="height:120px;"></div>120px</div>
+			</div>
+		</section>
+
+	</div>
+
+</body>
+
+</html>
